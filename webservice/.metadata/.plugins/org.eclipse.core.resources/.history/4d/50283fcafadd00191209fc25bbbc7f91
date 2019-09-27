@@ -1,0 +1,9 @@
+package com.hcl.resteasy.sevice;
+
+import com.hcl.employ.model.Employee;
+
+public interface EmployeeService {
+	public Employee[] getAllEmployees();
+
+
+}

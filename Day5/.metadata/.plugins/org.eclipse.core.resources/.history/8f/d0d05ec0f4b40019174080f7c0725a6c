@@ -1,0 +1,28 @@
+package com.hcl.collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrListDemo {
+	public static void main(String[] args) {
+		List lstnames=new ArrayList();
+		lstnames.add("priya");
+		lstnames.add("srinath");
+		lstnames.add("hema");
+		lstnames.add("bindu");
+		lstnames.add("janani");
+		lstnames.add("anisha");
+		lstnames.add("jehanath");
+//		for (Object object : lstnames) {
+//			System.out.println(object);
+//		}
+		
+		System.out.println("JDK 1.8");
+		//lstnames.forEach(System.out::println);
+		lstnames.forEach(System.err::println);
+		
+		
+		
+	}
+
+}

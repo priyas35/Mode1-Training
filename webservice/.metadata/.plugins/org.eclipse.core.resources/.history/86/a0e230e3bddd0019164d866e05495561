@@ -1,0 +1,21 @@
+package com.hcl.json;
+
+import java.util.Map;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class JasonMultiDimArray {
+	public static void main(String args[]){  
+		
+		JSONArray o = new JSONArray(); 
+		for(int i=0;i<2;i++){
+			JSONArray arr = new JSONArray(); 
+			arr.add("Emp" +i);    
+			  arr.add(1000*i);    
+			  arr.add(25+i);  
+			  ((Map) o).put(i,arr);
+		}
+		System.out.println(o);
+}
+}

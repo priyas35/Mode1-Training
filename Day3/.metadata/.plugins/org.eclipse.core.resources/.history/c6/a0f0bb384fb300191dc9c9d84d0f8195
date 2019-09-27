@@ -1,0 +1,23 @@
+package com.hcl.practice;
+
+class First{
+	public void show() {
+		System.out.println("base");
+
+	}
+}
+class Second extends First{
+	public void show() {
+		System.out.println("derived");
+
+	}
+	
+}
+
+public class Inh {
+	public static void main(String[] args) {
+		Second ob=new Second();
+		ob.show();
+	}
+ 
+}

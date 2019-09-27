@@ -1,0 +1,13 @@
+package com.hcl.library;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class LibraryLogin {
+
+	public static boolean authenticate(String user, String pwd) {
+		Connection con=DaoConnection.getConnection();
+		String cmd="select * from libusers where userName=? AND Password=?";
+		PreparedStatement pst=con.prepareStatement(cmd);
+	}
+}

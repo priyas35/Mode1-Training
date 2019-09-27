@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+   <div id="personal data"  style="color: #0900c4;
+   font: Helvetica 12pt;border: 1px solid black;">
+   <b>
+     Welcome to personal details page
+   </b><br />
+   <p>
+   Hi i am Prasanna from hydrabad.....
+   I have 10 years of industry experiance
+   </p>
+   </div><br /><br />
+</body>
+</html>

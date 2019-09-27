@@ -1,0 +1,16 @@
+package com.hcl.quiz;
+
+public class Quiz8 {
+	public static void power(int a,int b){
+	  for(int i=1;i<=b;i++){
+		  int c=a;
+		 int result=a*c;
+		 System.out.println("power= " +result);
+	  }
+	}
+	public static void main(String[] args) {
+		power(2,2);
+		
+	}
+
+}

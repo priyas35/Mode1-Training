@@ -1,0 +1,8 @@
+package com.hcl.bank;
+
+public class SearchAccount {
+
+	private int accountNo;
+	
+	
+}

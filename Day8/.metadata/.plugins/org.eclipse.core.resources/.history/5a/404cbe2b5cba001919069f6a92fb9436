@@ -1,0 +1,21 @@
+package com.hcl.junitpractice;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DataTest {
+
+	@Test
+	public void testsayHello() {
+		Data objdata=new Data();
+		assertEquals("welcome to junit", objdata.sayHello());
+	}
+	@Test
+	public void testsum() {
+		Data objdata=new Data();
+		assertEquals(4, objdata.sum(2,2));
+	}
+
+
+}

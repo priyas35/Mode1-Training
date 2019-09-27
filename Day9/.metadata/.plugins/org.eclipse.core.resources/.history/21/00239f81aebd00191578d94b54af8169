@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+     <form name="frmName">
+    <center>
+    <table border="3">
+    
+    <tr>
+    <th>FirstName</th>
+    <td>
+    <input type="text"
+      name="firstname"/>
+     
+      </td>
+      </tr>
+      <tr>
+    <th>LastName</th>
+    <td>
+    <input type="text"
+      name="lastname"/>
+      </td>
+       <span id="err1"></span>
+      </tr>
+      <tr>
+    <th>FullName</th>
+    <td>
+    <input type="text"
+      name="fullname"/>
+     
+      </td>
+      </tr>
+     
+      
+      </table>
+    </center>
+</form>
+
+</body>
+</html>

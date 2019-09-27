@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+
+function show(){
+	var res="";
+	var obj=new Date();
+	res+="Today's Date"+obj.getDate()+"<br/>";
+	var obj=new Month();
+	month=month+1;
+	res+="Month is"+obj.getMonth()+"<br/>";
+	res+="Year is"+obj.getYear()+"<br/>";
+	res+="Hours is"+obj.getHours()+"<br/>";
+	res+="Minutes is"+obj.getMinutes()+"<br/>";
+	res+="Seconds is"+obj.getSeconds()+"<br/>";
+	document.getElementById("res").innerHTML=res;
+	
+}

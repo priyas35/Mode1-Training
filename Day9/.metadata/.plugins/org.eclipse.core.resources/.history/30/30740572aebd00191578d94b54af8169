@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+     <form name="frmName">
+    <center>
+    <table border="3">
+    <tr>
+    <th colspan="2">
+    Login
+    </th>
+    </tr>
+    <tr>
+    <th>FirstName</th>
+    <td>
+    <input type="text"
+      name="firstname"/>
+     
+      </td>
+      </tr>
+      <tr>
+    <th>LastName</th>
+    <td>
+    <input type="text"
+      name="lastname"/>
+      </td>
+       <span id="err1"></span>
+      </tr>
+      <tr>
+    <th>FullName</th>
+    <td>
+    <input type="text"
+      name="fullname"/>
+     
+      </td>
+      </tr>
+      <th colspan="2">
+      <input type="button" value="Login" onclick="chkLogin()">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="button" value="Reset">
+      
+      </table>
+    </center>
+</form>
+
+</body>
+</html>

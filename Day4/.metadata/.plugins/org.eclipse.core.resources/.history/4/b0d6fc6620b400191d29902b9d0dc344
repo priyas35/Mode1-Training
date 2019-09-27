@@ -1,0 +1,32 @@
+package com.hcl.qz;
+
+class Validity{
+	public void show(String mail) throws Exception{
+		int len=mail.length();
+		for(int i=0;i<=len;i++){
+			if(mail.charAt(i) != '@'){
+				throw  new Exception("InvalidEmailException");
+			}
+			
+		}
+		if(len >12){
+			throw new Exception("InvalidUsernameException");
+		}
+		
+		
+	}
+}
+
+public class Email {
+	public static void main(String[] args) throws Exception {
+		
+	
+	String mail="priya@gmail.com";
+	
+	Validity val=new Validity();
+	
+		val.show(mail);
+	
+	
+	}
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+      <form name="frmdata">
+      <center>
+        User Name:
+         <input type="text" name="userName" />
+         <br/><br/>
+         Password:
+         <input type="password" name="passWord" />
+         <br/><br/>
+         <input type="button" name="Login" />
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <input type="reset" name="Reset" />
+         
+         </center>
+         </form>
+</body>
+</html>

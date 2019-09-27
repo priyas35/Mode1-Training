@@ -1,0 +1,50 @@
+package com.hcl.jason;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class JavaApplication {
+
+@SuppressWarnings("unchecked")
+ public static void main(String[] args) {
+
+StringBuilder contentBuilder = new StringBuilder();
+    try (Stream<String> stream = Files.lines( Paths.get("C:\\Users\\Coalesce\\Downloads\\Employees.json.json"), StandardCharsets.UTF_8))
+    {
+        stream.forEach(s -> contentBuilder.append(s));
+    }
+    catch (IOException e)
+    {
+        e.printStackTrace();
+    }
+    String s= contentBuilder.toString();
+    JSONObject jsonObject = (JSONObject)JSONValue.parse(s);
+    JSONObject obj2=(JSONObject) jsonObject.get("Employees");
+   
+    JSONArray arr=(JSONArray)obj2.get("Employee");
+ for(int i=0;i<3;i++){
+ JSONObject a=(JSONObject) arr.get(i);
+ String empno = (String) a.get("empNo");
+   String empName = (String) jsonObject.get("empName");  
+   double salary = (Double) jsonObject.get("salary");
+   String dateOfJoin = (String) jsonObject.get("dateOfJoin");  
+   String band = (String) jsonObject.get("band");
+   System.out.println(empno+" "+empName+" "+salary+" "+dateOfJoin+" "+band+" ");
+ }
+   
+ }
+
+}
+

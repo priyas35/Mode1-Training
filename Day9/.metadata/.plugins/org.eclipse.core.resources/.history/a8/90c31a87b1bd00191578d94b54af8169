@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+
+function gotCursor(){
+	frmData.fullName.value="";
+	
+}
+function gotCursor1(){
+	
+	var full;
+	full=(frmData.firstName.value + frmData.lastName.value);
+	frmData.fullName.value=full;
+	
+	
+}

@@ -1,0 +1,221 @@
+package com.hcl.bank;
+
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+public class AccountDAO {
+	PreparedStatement pst;
+	Connection con;
+	
+	public String withdrawAccountdao(int accountNo,int withdrawAmount){
+		con=DaoConnection.getConnection();
+		String result="";
+		Accounts objAccounts=searchAccountDao(accountNo);
+		if(objAccounts != null){
+			int amount=objAccounts.getAmount();
+			String status=objAccounts.getStatus();
+			if(status.equalsIgnoreCase("inactive")){
+			result="account closed";
+			}else{
+			String cmd="update accounts set amount=amount-? where accountno=?";
+			if(amount-withdrawAmount >= 1000){
+				try {
+					pst=con.prepareStatement(cmd);
+					pst.setInt(1, withdrawAmount);
+					pst.setInt(2, accountNo);
+					pst.executeUpdate();
+					cmd="insert into trans(accountno,transamount,transtype) values(?,?,?)";
+					pst=con.prepareStatement(cmd);
+					pst.setInt(1, accountNo);
+					pst.setInt(2, withdrawAmount);
+					pst.setString(3, "D");
+					pst.executeUpdate();
+					result="amount debited";
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			else{
+				result="insufficient funds";
+			}
+		}
+		}else{
+			result="account no not found";
+		}
+		
+		return result;
+	}
+	
+	public String depositAccountDao(int accountNo,int depAmount){
+		con=DaoConnection.getConnection();
+		String result="";
+		
+		String cmd="update accounts set amount=amount+? where accountno=?";
+		Accounts objAccounts=searchAccountDao(accountNo);
+		if(objAccounts==null){
+			result="account not found !!!!!!!!";
+		}else{
+			String status=objAccounts.getStatus();
+			if(status.equalsIgnoreCase("inactive")){
+			result="account inactive !!!!!!!!";
+		}
+		else{
+		try {
+			pst=con.prepareStatement(cmd);
+			pst.setInt(1,depAmount);
+			pst.setInt(2, accountNo);
+			pst.executeUpdate();
+			cmd="insert into trans(accountno,transamount,transtype) values(?,?,?) ";
+			pst=con.prepareStatement(cmd);
+			pst.setInt(1, accountNo);
+			pst.setInt(2,depAmount);
+			pst.setString(3, "C");
+			pst.executeUpdate();
+			result="amount Credited !!!!!!!!";
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			result=e.getMessage();
+		}
+		}
+		}
+		return result;
+	}
+	
+	public String closeAccountDao(int accountNo){
+		con=DaoConnection.getConnection();
+		String result="";
+		Accounts objAccount=searchAccountDao(accountNo);
+		if(objAccount==null){
+			result="account no not found !!!!!!!!";
+		}
+		
+		else{
+		String cmd="update accounts set status='inactive' where accountno=?";
+		
+		try {
+			pst=con.prepareStatement(cmd);
+			pst.setInt(1, accountNo);
+			pst.executeUpdate();
+			result="account closed !!!!!!!!";
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			result=e.getMessage();
+		
+		}
+		}
+		return result;
+	}
+	
+	public String updateAccountdao(int accountNo,String city,String state){
+		con=DaoConnection.getConnection();
+		
+		Accounts objAccounts=searchAccountDao(accountNo);
+		String cmd="update accounts set city=? , state=? where accountno=?";
+		String result="";
+		if(objAccounts==null){
+			result="account not found";
+		}else{
+			String status=objAccounts.getStatus();
+			if(status.equals("inactive")){
+			result="account closed already";
+		}
+		else {
+		try {
+			pst=con.prepareStatement(cmd);
+			pst.setString(1, city);
+			pst.setString(2, state);
+			pst.setInt(3, accountNo);
+			pst.executeUpdate();
+			result="account updated";
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			result=e.getMessage();
+		}
+		}
+		}
+		
+		return result;
+	}
+	
+	public Accounts searchAccountDao(int accountNo){
+		con= DaoConnection.getConnection();
+		String cmd="select * from Accounts where accountno=?";
+		Accounts objAccounts=null;
+		try {
+			pst=con.prepareStatement(cmd);
+			pst.setInt(1, accountNo);
+			ResultSet rs=pst.executeQuery();
+             if(rs.next()){
+				objAccounts=new Accounts();
+				objAccounts.setFirstName(rs.getString("firstName"));
+				objAccounts.setLastName(rs.getString("lastname"));
+				objAccounts.setCity(rs.getString("city"));
+				objAccounts.setState(rs.getString("state"));
+				objAccounts.setAmount(rs.getInt("amount"));
+				objAccounts.setCheqFacil(rs.getString("cheqFacil"));
+				objAccounts.setAccountType(rs.getString("Accounttype"));
+				objAccounts.setStatus(rs.getString("status"));
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return objAccounts;
+	}
+	
+	public String createAccountDao(Accounts objAccounts){
+		con=DaoConnection.getConnection();
+		String cmd="insert into accounts(accountno,firstname,"
+				+ "lastname,city,state,amount,cheqfacil,accounttype)"
+				+ " values(?,?,?,?,?,?,?,?)";
+		String result="";
+		try {
+			pst=con.prepareStatement(cmd);
+			pst.setInt(1, objAccounts.getAccountNo());
+			pst.setString(2, objAccounts.getFirstName());
+			pst.setString(3, objAccounts.getLastName());
+			pst.setString(4, objAccounts.getCity());
+			pst.setString(5, objAccounts.getState());
+			pst.setInt(6, objAccounts.getAmount());
+			pst.setString(7, objAccounts.getCheqFacil());
+			pst.setString(8, objAccounts.getAccountType());
+			pst.executeUpdate();
+			result="** account created successfully **";
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			result=e.getMessage();
+		}
+		return result;
+	}
+	
+	public int  generateAccountNumberDao(){
+		con=DaoConnection.getConnection();
+		int accno=0;
+		String cmd="select case when max(accountno) is null then 1"
+				+ " else max(accountno)+1 "
+				+ "end accno from accounts";
+		
+		try {
+			pst=con.prepareStatement(cmd);
+			ResultSet rs=pst.executeQuery();
+			rs.next();
+			accno=rs.getInt("accno");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	return accno;
+
+}
+}

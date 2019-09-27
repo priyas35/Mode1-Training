@@ -1,0 +1,28 @@
+package com.hcl.abs;
+
+abstract class Training{
+	abstract void name();
+	abstract void email();
+}
+class Anubav extends Training{
+
+	@Override
+	void name() {
+		System.out.println("Name is Anubav..");
+		
+	}
+
+	@Override
+	void email() {
+		System.out.println("anubavanand@gmail.com");
+		
+		
+	}
+	
+}
+
+class 
+
+public class AbsDemo {
+
+}

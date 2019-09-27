@@ -1,0 +1,98 @@
+package com.hcl.hw;
+
+
+import java.util.HashMap;
+import java.util.Scanner;
+ 
+public class IntegerToRoman
+{
+	private static int[] bases = { 1000, 100, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,20,1,2,3,4,5,6,7,8,9 };
+	private static HashMap<Integer, String> map = new HashMap<Integer, String>();
+ 
+	private static void setup()
+	{
+		map.put(1, "one");
+		map.put(2, "two");
+		map.put(3, "three");
+		map.put(4, "four");
+		map.put(5, "five");
+		map.put(6, "six");
+		map.put(7, "seven");
+		map.put(8, "eight");
+		map.put(9, "nine");
+		map.put(10, "ten");
+		map.put(11, "eleven");
+		map.put(12, "twelve");
+		map.put(13, "thirteen");
+		map.put(14, "fourteen");
+		map.put(15, "fifteen");
+		map.put(16, "sixteen");
+		map.put(17, "seventeen");
+		map.put(18, "eightteen");
+		map.put(19, "ninteen");
+		map.put(20, "twenty");
+		map.put(30, "thirty");
+		map.put(40, "fourty");
+		map.put(50, "fifty");
+		map.put(60, "sixty");
+		map.put(70, "seventy");
+		map.put(80, "eighty");
+		map.put(90, "ninty");
+		map.put(100, "hundread");
+		map.put(13, "thousand");
+		
+		
+		
+	}
+ 
+	public String intToRoman(int num)
+	{
+		setup();
+		String result = new String();
+		int count=0,digit;
+		while(num !=0){
+		    num/=10;
+		    count++;
+		}
+		if(count == 4  || count ==3){
+		    while(num!=0){
+		        digit=num%10;
+		        num/=10;
+		          
+		            result=map.get(digit);
+		            if(num >=10){
+		                result=map.get(num);
+		            }
+		        
+		       else if(count == 2){
+		           while(num!=0){
+		               
+		           
+		           digit=num%10;
+		           num/=10;
+		           if(digit != 1){
+		               result=map.get(digit);
+		           }else{
+		               result=map.get(num);
+		           }
+		           
+		       }
+		    
+		       }   
+		    
+		}
+		return result;
+		    }
+	}
+ 
+	public static void main(String arg[])
+	{
+		System.out.println("Enter the number : ");
+		Scanner sc = new Scanner(System.in);
+		int no = sc.nextInt();
+		IntegerToRoman in = new IntegerToRoman();
+		int value=no;
+		String sd = in.intToRoman(value);
+		System.out.println(value+" ---> " + sd);
+	}
+}

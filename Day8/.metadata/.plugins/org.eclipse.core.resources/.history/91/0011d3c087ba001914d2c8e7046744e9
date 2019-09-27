@@ -1,0 +1,24 @@
+package com.hcl.inventory;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class StockTestCase {
+
+	@Test
+	public void test() {
+		Stock stock=new Stock();
+		stock.setStockid("S002");
+		stock.setItemname("laptop");
+		stock.setPrice(100000.00);
+		stock.setQuantityavail(100.00);
+		
+		assertEquals("S002", stock.getStockid());
+		assertEquals("laptop", stock.getItemname());
+		assertEquals(12.00, 12.00);
+//		assertEquals(100000.00, stock.getPrice());
+//		assertEquals(100.00, stock.getQuantityavail());
+	}
+
+}

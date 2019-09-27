@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="rest/files/upload" method="post" enctype="multipart/form-data">
+	   <p>
+		Select a file : <input type="file" name="file" size="45" />
+	   </p>
+	   <input type="submit" value="Upload File" />
+	 <img id="preview" 
+     src="" 
+     alt="" 
+     style="display:none; max-width: 160px; max-height: 120px; border: none;"/>
+
+<div id="preview_ie"></div>
+<script>
+#preview_ie {
+  FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)
+}  
+</script>
+<script>
+  {% include "pic_preview.js" %}
+</script> 
+<script>
+ function readURL (imgFile) {    
+  var newPreview = document.getElementById('preview_ie');
+  newPreview.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = imgFile.value;
+  newPreview.style.width = '160px';
+  newPreview.style.height = '120px';
+}   
+ </script> 
+</form>
+</body>
+</html>

@@ -1,0 +1,63 @@
+package com.hcl.bank;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class MenuServlet
+ */
+public class MenuServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public MenuServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher disp=request.getRequestDispatcher("menu.html");
+		disp.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		
+		
+		
+		
+//		RequestDispatcher disp1=request.getRequestDispatcher("updateaccount.html");
+//		disp1.forward(request, response);
+//		out.println("<a href='SearchAccountServlet'>SearchAccountServlet</a>");
+//		RequestDispatcher disp2=request.getRequestDispatcher("searchaccount.html");
+//		disp2.forward(request, response);
+//		out.println("<a href='CloseAccountServlet'>CloseAccountServlet</a>");
+//		RequestDispatcher disp3=request.getRequestDispatcher("closeaccount.html");
+//		disp3.forward(request, response);
+//		out.println("<a href='DepositAccountServlet'>DepositAccountServlet</a>");
+//		RequestDispatcher disp4=request.getRequestDispatcher("depositaccount.html");
+//		disp4.forward(request, response);
+//		out.println("<a href='WithdrawAccountServlet'>WithdrawAccountServlet</a>");
+//		RequestDispatcher disp5=request.getRequestDispatcher("withdrawaccount.html");
+//		disp5.forward(request, response);
+//		
+		
+	}
+
+}

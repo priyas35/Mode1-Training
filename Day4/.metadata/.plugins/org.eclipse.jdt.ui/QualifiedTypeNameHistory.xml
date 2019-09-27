@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.hcl.ex.ThrEx"/>
+<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+<fullyQualifiedTypeName name="com.hcl.ex.Custom"/>
+<fullyQualifiedTypeName name="com.hcl.ex.NumberZeroException"/>
+<fullyQualifiedTypeName name="com.hcl.ex.NegativeException"/>
+<fullyQualifiedTypeName name="com.hcl.qz.Validity"/>
+<fullyQualifiedTypeName name="java.nio.charset.CharacterCodingException"/>
+<fullyQualifiedTypeName name="javax.management.InvalidAttributeValueException"/>
+<fullyQualifiedTypeName name="com.hcl.qz.InvalidEmailException"/>
+<fullyQualifiedTypeName name="com.hcl.qz.D2"/>
+<fullyQualifiedTypeName name="javax.activity.InvalidActivityException"/>
+<fullyQualifiedTypeName name="com.hcl.qz.InvalidIdUserNameException"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+</qualifiedTypeNameHistroy>

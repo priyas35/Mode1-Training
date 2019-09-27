@@ -1,0 +1,53 @@
+package com.hcl.collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrListDemo {
+  /**
+   * main method is created.
+   */
+
+  public static void main(String[] args) { 
+    List lstnames = new ArrayList();
+    lstnames.add("priya");
+    lstnames.add("srinath");
+    lstnames.add("hema");
+    lstnames.add("bindu");
+    lstnames.add("janani");
+    lstnames.add("anisha");
+    lstnames.add("jehanath");
+    System.out.println("names are");
+    /**		for (Object object : lstnames) {
+	 *		System.out.println(object);
+	 * }
+	 */
+    System.out.println("JDK 1.8");
+    lstnames.forEach(System.out::println);
+    /** to show error message
+     *lstnames.forEach(System.err::println);
+     * 
+     */
+    
+    /**  Edit. 
+     */
+    lstnames.set(2, "prem");
+    System.out.println("list after editing");
+    lstnames.forEach(System.out::println);
+    /**  
+     * remove.
+     */
+    System.out.println("list after removing by index");
+    lstnames.remove(4);
+    lstnames.forEach(System.out::println);
+
+    System.out.println("list after removing by objects");
+    lstnames.remove("sri");
+    lstnames.forEach(System.out::println);
+
+    System.out.println("get elements");
+    System.out.println(lstnames.get(1));
+
+  }
+
+}

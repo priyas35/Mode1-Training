@@ -1,0 +1,31 @@
+package com.hcl.boxing;
+
+public class EmploySet {
+	public Employ showEmploy(int empno){
+		Employ employ=null;
+		if(empno==1){
+			employ=new Employ();
+			employ.empno=100;
+			employ.name="Anu";
+			employ.basic=6576;
+		}
+		if(empno==3){
+			employ=new Employ();
+			employ.empno=102;
+			employ.name="hema";
+			employ.basic=6446;
+		}
+		return employ;
+	}
+	public static void main(String[] args) {
+		EmploySet obj=new EmploySet();
+		Employ res=obj.showEmploy(1);
+		if(res!=null){
+			System.out.println(res);
+		}
+		else{
+			System.out.println("Empno not found");
+		}
+	}
+
+}

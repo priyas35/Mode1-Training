@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+     <form method="post" action="Login.jsp">
+     <center>
+		<h1> Login Screen </h1>
+		<h3>Employee Id : <input type="text" name="empId" size="30"> <br/><br/>
+		Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="password" name="secretCode" size="30"></h3> <br/><br/>
+		<input type="submit" value="Login"  style="color:black;background-color:yellow;border:0px; border-radius: 12px;
+  box-shadow: 0 5px #666;
+  transform: translateY(8px);
+  font-size:20px;
+  padding:20px"/>
+		</center>
+		</form>
+     
+</body>
+</html>

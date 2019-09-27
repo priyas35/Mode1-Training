@@ -1,0 +1,43 @@
+package com.hcl.qz;
+
+import javax.activity.InvalidActivityException;
+
+class D2{
+	public void show(String mail) throws Exception{
+		int len=mail.length();
+		int count=0;
+		for(int i=0;i<len;i++){
+			if(mail.in){
+				throw new InvalidActivityException("Invalid user exception");
+			}
+			if(mail.charAt(i) != '@'){
+				count++;
+				if(count >6){
+				  throw new InvalidIdUserNameException("Invalid email id");	
+				}else{
+					System.out.println(mail);
+				}
+			
+			}
+		}
+		
+	}
+}
+
+public class E2 {
+	public static void main(String[] args) {
+		String mail="fdfdhshgsththjghyg@uyf.com";
+		D2 d=new D2();
+		try {
+			d.show(mail);
+		} catch(InvalidActivityException e){
+			System.out.println(e.getMessage());
+		}catch(InvalidIdUserNameException e){
+			System.out.println(e.getMessage());
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

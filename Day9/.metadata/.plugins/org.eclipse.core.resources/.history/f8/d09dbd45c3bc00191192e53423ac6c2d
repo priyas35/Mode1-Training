@@ -1,0 +1,104 @@
+package com.hcl.threads;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Vector;
+
+class Listdemo implements Runnable{
+
+	@Override
+	public void run() {
+		List lstdata=new ArrayList<>();
+		lstdata.add("keerthana");
+		lstdata.add("yash");
+		lstdata.add("amit");
+		lstdata.add("hema");
+		lstdata.add("bindu");
+		lstdata.add("janani");
+		lstdata.add("anisha");
+		
+		for (Object object : lstdata) {
+			System.out.println(object);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+}
+
+class LinkDemo implements Runnable{
+
+	@Override
+	public void run() {
+        LinkedList lst=new LinkedList();
+        lst.add("senthil");
+        lst.add("sasi");
+        lst.add("subi");
+        lst.add("hari");
+        lst.add("priya");
+        lst.add("srinath");
+        lst.addFirst("my family");
+        lst.addLast("uma selvaraj");
+        
+        for (Object object : lst) {
+			System.out.println(object);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+}
+
+class Vectordemo implements Runnable{
+
+	@Override
+	public void run() {
+		Vector v=new Vector(3,2);
+		v.addElement("achu");
+		v.addElement("sindhu");
+		v.addElement("jp");
+		v.addElement("ruuuu");
+		v.addElement("jana");
+		v.addElement("iswerya");
+		for (Object object : v) {
+			System.out.println(object);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
+}
+
+
+public class ThrImp {
+	public static void main(String[] args) {
+		Thread t1=new Thread(new Listdemo());
+		Thread t2=new Thread(new LinkDemo());
+		Thread t3=new Thread(new Vectordemo());
+		
+		t1.start();
+		try {
+			t1.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		t2.start();
+		t3.start();
+	}
+
+}

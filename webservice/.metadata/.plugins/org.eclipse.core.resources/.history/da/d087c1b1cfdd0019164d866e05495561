@@ -1,0 +1,45 @@
+package com.hcl.jason;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class JavaApplication {
+    public static void main(String[] args) throws FileNotFoundException,
+            IOException, ParseException {
+
+        JSONParser parser = new JSONParser();
+        JSONArray jsonArray = (JSONArray) parser.parse(new FileReader(
+                "C:\\Users\\Coalesce\\Downloads\\Employees.json.json"));
+
+        for (Object o : jsonArray) {
+            JSONObject person = (JSONObject) o;
+
+            int empNo =  (int) person.get("empNo");
+            System.out.println(empNo);
+
+            String empName = (String) person.get("empName");
+            System.out.println(empName);
+
+            String band = (String) person.get("band");
+            System.out.println(band);
+
+            String dateOfJoin = (String) person.get("dateOfJoin");
+            System.out.println(dateOfJoin);
+
+
+            JSONArray arrays = (JSONArray) person.get("Employees");
+            for (Object object : arrays) {
+                System.out.println("Employees::::" + object);
+            }
+            System.out.println();
+
+        }
+
+    }
+}

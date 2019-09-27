@@ -1,0 +1,46 @@
+package com.hcl.qz;
+
+import java.nio.charset.CharacterCodingException;
+
+import javax.activity.InvalidActivityException;
+import javax.management.InvalidAttributeValueException;
+
+class Validity{
+	public void show(String mail) throws Exception {
+		int len=mail.length();
+		for(int i=0;i<=len;i++){
+			if(mail.charAt(i) != '@'){
+				throw  new InvalidActivityException("InvalidEmailException");
+			}
+			
+		}
+		if(len >12){
+			throw new InvalidAttributeValueException("InvalidUsernameException");
+		}
+		
+		
+	}
+}
+
+public class Email {
+	public static void main(String[] args)  {
+		
+	
+	String mail="priya@gmail.com";
+	
+	Validity val=new Validity();
+	
+		try {
+			val.show(mail);
+		}catch(InvalidActivityException e){
+			System.out.println(e.getMessage());
+		}catch(InvalidAttributeValueException e){
+			System.out.println(e.getMessage());
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	
+	
+	}
+}

@@ -1,0 +1,19 @@
+package com.hcl.qz;
+class D2{
+	public void show(String mail){
+		int len=mail.length();
+		for(int i=0;i<len;i++){
+			if(mail.charAt(i) != '@'){
+				throw new Exception("Invalid user exception");
+			}
+		}
+	}
+}
+
+public class E2 {
+	public static void main(String[] args) {
+		String mail="fdfdhsg@uyf.com";
+		
+	}
+
+}

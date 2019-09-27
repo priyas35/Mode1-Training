@@ -1,0 +1,47 @@
+package com.hcl.jason;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class JavaApplication {
+    public static void main(String[] args) throws FileNotFoundException,
+            IOException, ParseException {
+    	 String strCurrentLine = null;
+    	 try (BufferedReader br = new BufferedReader(new FileReader(  "C:\\Users\\Coalesce\\Downloads\\Employees.json.json"))) {
+
+    		  
+
+    		   while ((strCurrentLine = br.readLine()) != null) {
+    			   strCurrentLine+=strCurrentLine;
+    		   }
+
+    		  } catch (IOException e) {
+    		   e.printStackTrace();
+    		  }
+    		 
+   
+    	 JSONObject obj=(JSONObject)JSONValue.parse(strCurrentLine);  
+    	 JSONArray ob=new JSONArray();
+    
+        
+       for (Object o : ob) {
+        	
+        	  
+        	    String name = (String) obj.get("name");  
+        	    double salary = (Double) obj.get("salary");  
+        	    long age = (Long) obj.get("age");  
+        	    System.out.println(name+" "+salary+" "+age);  
+        }
+    }
+}
+
+
+

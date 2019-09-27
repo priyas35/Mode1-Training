@@ -1,0 +1,22 @@
+package com.hcl.hib;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
+
+public class Main2 {
+	public static void main(String[] args) {
+		
+	
+	Configuration cfg=new AnnotationConfiguration();
+	cfg.configure("named-queries.hbm.xml");
+	SessionFactory sf=cfg.buildSessionFactory();
+	Session s=sf.openSession();
+	Query q=s.createQuery("from Employ");
+	q=s.getNamedQuery("HQL_GET_EMPLOY_BY_ID");
+	q.setInteger("id", 8);
+	Employ emp=(Employ) q.uniqueResult();
+}
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>InventryProjectServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>searchstock.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>CreateStockServlet</display-name>
+    <servlet-name>CreateStockServlet</servlet-name>
+    <servlet-class>com.hcl.inventory.CreateStockServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateStockServlet</servlet-name>
+    <url-pattern>/CreateStockServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchStockServlet</display-name>
+    <servlet-name>SearchStockServlet</servlet-name>
+    <servlet-class>com.hcl.inventory.SearchStockServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchStockServlet</servlet-name>
+    <url-pattern>/SearchStockServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PlaceOrderServlet</display-name>
+    <servlet-name>PlaceOrderServlet</servlet-name>
+    <servlet-class>com.hcl.inventory.PlaceOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PlaceOrderServlet</servlet-name>
+    <url-pattern>/PlaceOrderServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,18 @@
+package com.hcl.boxing;
+
+public class Student {
+	
+	int sno;
+	String name;
+	String city;
+	double cga;
+	
+	
+	@Override
+	public String toString() {
+		return "Student [sno=" + sno + ", name=" + name + ", city=" + city + ", cga=" + cga + "]";
+	}
+	
+	
+
+}

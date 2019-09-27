@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.hcl.practice.Enum2"/>
+<fullyQualifiedTypeName name="com.hcl.practice.First"/>
+<fullyQualifiedTypeName name="com.hcl.practice.Second"/>
+<fullyQualifiedTypeName name="com.hcl.practice.Employ"/>
+<fullyQualifiedTypeName name="com.hcl.abs.SaiKrishna"/>
+<fullyQualifiedTypeName name="com.hcl.abs.Training"/>
+<fullyQualifiedTypeName name="com.hcl.abs.Anubav"/>
+<fullyQualifiedTypeName name="com.hcl.abs.AbsTest"/>
+<fullyQualifiedTypeName name="com.hcl.abs.Animal"/>
+<fullyQualifiedTypeName name="com.hcl.abs.Raghu"/>
+<fullyQualifiedTypeName name="com.hcl.abs.Employ"/>
+<fullyQualifiedTypeName name="com.hcl.inf.Itraining"/>
+<fullyQualifiedTypeName name="com.hcl.inf.Hema"/>
+<fullyQualifiedTypeName name="com.hcl.inf.Keerthana"/>
+<fullyQualifiedTypeName name="com.hcl.inf.Ione"/>
+<fullyQualifiedTypeName name="com.hcl.inf.Test"/>
+<fullyQualifiedTypeName name="com.hcl.inf.Itwo"/>
+<fullyQualifiedTypeName name="com.hcl.inf.Ifirst"/>
+<fullyQualifiedTypeName name="com.hcl.inf.Isecond"/>
+<fullyQualifiedTypeName name="com.hcl.inf.Ithird"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+<fullyQualifiedTypeName name="com.hcl.ex.First"/>
+<fullyQualifiedTypeName name="com.hcl.ex.Second"/>
+<fullyQualifiedTypeName name="java.lang.ClassCastException"/>
+<fullyQualifiedTypeName name="com.hcl.quiz.C1"/>
+<fullyQualifiedTypeName name="com.hcl.quiz.C2"/>
+<fullyQualifiedTypeName name="com.hcl.quiz.Test"/>
+<fullyQualifiedTypeName name="com.hcl.quiz.Employ"/>
+<fullyQualifiedTypeName name="com.hcl.quiz.HrEmploy"/>
+<fullyQualifiedTypeName name="com.hcl.quiz.JavaEmploy"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="com.hcl.quiz.Quiz8"/>
+</qualifiedTypeNameHistroy>

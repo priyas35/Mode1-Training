@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+
+
+function lostCursor(){
+	
+	var str1 = frmName.firstName.value;
+	var str2= frmName.lastName.value;
+	var full = str1 +str2;
+	frmName.fullName.value=full;
+	
+	
+	
+	
+	
+	
+}

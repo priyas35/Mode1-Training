@@ -1,0 +1,27 @@
+package com.hcl.inventory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class StockDAO {
+	
+	PreparedStatement pst;
+	Connection con;
+	
+	public int  generateStockidDao(){
+		con=DaoConnection.getConnection();
+		String stockid;
+		String cmd="Select max(stockId) sid from stock";
+		try {
+			PreparedStatement pst=con.prepareStatement(cmd);
+			ResultSet rs=pst.executeQuery();
+			String stid=rs.getString("sid");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+}
+}

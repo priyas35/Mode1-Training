@@ -1,0 +1,11 @@
+package com.hcl.collections;
+
+import java.util.Comparator;
+
+public class NameComparator implements Comparator<Employ>{
+	public int compare(Employ o1,Employ o2) {
+		return o1.name.compareTo(o2.name);
+		
+	}
+
+}

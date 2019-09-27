@@ -1,0 +1,30 @@
+package com.hcl.bank;
+
+import java.util.Scanner;
+
+public class CreateAccountMain {
+	public static void main(String[] args) {
+		int accountno=AccountBAL.generateAccountBal();
+		//System.out.println(accountno);
+		Accounts obAccounts=new Accounts();
+		obAccounts.setAccountNo(accountno);
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter first name");
+		obAccounts.setFirstName(sc.nextLine());
+		System.out.println("enter last name");
+		obAccounts.setLastName(sc.nextLine());
+		System.out.println("enter city");
+		obAccounts.setCity(sc.nextLine());
+		System.out.println("enter state");
+		obAccounts.setState(sc.nextLine());
+		System.out.println("enter amount");
+		obAccounts.setAmount(Integer.parseInt(sc.nextLine()));
+		System.out.println("enter cheqfacil");
+		obAccounts.setCheqFacil(sc.nextLine());
+		System.out.println("enter account type");
+		obAccounts.setAccountType(sc.nextLine());
+		System.out.println(AccountBAL.createAccountBal(objAccounts));
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+package com.hcl.practice;
+
+public class Attendance {
+	public static void show()
+
+}

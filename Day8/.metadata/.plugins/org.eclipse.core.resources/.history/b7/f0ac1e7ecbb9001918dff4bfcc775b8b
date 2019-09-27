@@ -1,0 +1,23 @@
+package com.hcl.inventory;
+
+import java.util.Scanner;
+
+public class CreateStockMain {
+	public static void main(String[] args) {
+		String stockid=StockBAL.generateStockidBal();
+		String itemname;
+		double price,quantityavail;
+		Stock stock=new Stock();
+		stock.setStockid(stockid);
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter item name");
+		itemname=sc.nextLine();
+		System.out.println("enter price");
+		price=Double.parseDouble(sc.nextLine());
+		System.out.println("enter quantity available");
+		quantityavail=Double.parseDouble(sc.nextLine());
+		System.out.println(StockBAL.createStockbal(stock));
+		
+	}
+
+}

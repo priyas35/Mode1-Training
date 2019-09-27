@@ -1,0 +1,15 @@
+INDEX VERSION 1.3+C:\hcljava\webservice\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1758952240.index
+4111655648.index
+3569360094.index
+3796450161.index
+464949462.index
+3570914594.index
+1318766783.index
+1630286665.index
+1303624996.index
+184550145.index
+382529562.index
+2908803530.index
+4157513118.index
+491517653.index

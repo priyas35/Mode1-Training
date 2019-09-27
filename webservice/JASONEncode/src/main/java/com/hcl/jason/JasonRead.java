@@ -1,0 +1,27 @@
+package com.hcl.jason;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class JasonRead {
+
+ private static final String FILENAME = "C:\\Users\\Coalesce\\Downloads\\Employees.json.json";
+
+ public static void main(String[] args) {
+
+  try (BufferedReader br = new BufferedReader(new FileReader(FILENAME))) {
+
+   String strCurrentLine;
+
+   while ((strCurrentLine = br.readLine()) != null) {
+    System.out.println(strCurrentLine);
+   }
+
+  } catch (IOException e) {
+   e.printStackTrace();
+  }
+ }
+}
+ 
+

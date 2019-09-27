@@ -1,0 +1,41 @@
+package com.hcl.jason;
+
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class New1 {
+	
+	public static ArrayList<Employee> readFromJsonFile(String fileName){
+        ArrayList<Employee> result = new ArrayList<Employee>();
+
+        try{
+            String text = new String(Files.readAllBytes(Paths.get(fileName)), StandardCharsets.UTF_8);
+
+            JSONObject obj = new JSONObject(text);
+            JSONArray arr = obj.getJSONArray("employees");
+
+            for(int i = 0; i < arr.length(); i++){
+                String name = arr.getJSONObject(i).getString("name");
+                short salary = Short.parseShort(arr.getJSONObject(i).getString("salary"));
+                String position = arr.getJSONObject(i).getString("position");
+                byte years_in_company = Byte.parseByte(arr.getJSONObject(i).getString("years_in_company")); 
+                if (position.compareToIgnoreCase("manager") == 0){
+                    result.add(new Manager(name, salary, position, years_in_company));
+                }
+                else{
+                    result.add(new OrdinaryEmployee(name, salary, position, years_in_company));
+                }
+            }           
+        }
+        catch(Exception ex){
+            System.out.println(ex.toString());
+        }
+        return result;
+    }
+
+}

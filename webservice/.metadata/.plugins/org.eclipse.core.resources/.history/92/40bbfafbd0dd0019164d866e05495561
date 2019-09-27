@@ -1,0 +1,60 @@
+package com.hcl.jason;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class JavaApplication {
+
+public static void main(String[] args) {
+
+      JSONParser parser = new JSONParser();
+
+    try {
+        JSONArray a = (JSONArray) parser.parse(new FileReader("C:\\Users\\Coalesce\\Downloads\\Employees.json.json"));
+        for (Object o : a)
+        {
+            JSONObject employee = (JSONObject) o;
+
+            Long no = (Long) employee.get("empNo");
+            System.out.println("Employee Number : " + no);
+
+            String st = (String) employee.get("empName");
+            System.out.println("Employee Name : " + st);
+
+            Long salary = (Long) employee.get("salary");
+            System.out.println("Employee Salary : " + salary);
+
+            String doj = (String) employee.get("dateOFJoin");
+            System.out.println("Employee DOJ : " + doj);
+
+            String band = (String) employee.get("band");
+            System.out.println("Employee Role : " + band);
+
+            System.out.println("\n");
+
+        }
+
+
+    } catch (FileNotFoundException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    } catch (ParseException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+
+
+
+
+}
+
+}

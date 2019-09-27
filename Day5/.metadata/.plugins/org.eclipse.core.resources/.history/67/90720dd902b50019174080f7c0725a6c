@@ -1,0 +1,36 @@
+package com.hcl.collections;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class LinkedHash {
+	public static void main(String[] args) {
+		Set lstnames=new LinkedHashSet<>();
+		lstnames.add("priya");
+		lstnames.add("srinath");
+		lstnames.add("hema");
+		lstnames.add("bindu");
+		lstnames.add("janani");
+		lstnames.add("anisha");
+		lstnames.add("jehanath");
+		
+		lstnames.add("priya");
+		lstnames.add("srinath");
+		lstnames.add("hema");
+		lstnames.add("bindu");
+		lstnames.add("janani");
+		lstnames.add("anisha");
+		lstnames.add("jehanath");
+		
+		lstnames.add("priya");
+		lstnames.add("srinath");
+		lstnames.add("hema");
+		lstnames.add("bindu");
+		lstnames.add("janani");
+		lstnames.add("anisha");
+		lstnames.add("jehanath");
+		System.out.println("hashset data");
+		lstnames.forEach(System.out::println);
+	}
+
+}

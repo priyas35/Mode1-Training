@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+
+
+function lostCursor(){
+	
+	var str1 = frmName.firstName.value;
+	var str2= frmName.lastName.value;
+	var res = str1.concat(str2);
+	document.getElementById("res").innerHTML=res;
+	
+	
+	
+	
+	
+	
+	
+}

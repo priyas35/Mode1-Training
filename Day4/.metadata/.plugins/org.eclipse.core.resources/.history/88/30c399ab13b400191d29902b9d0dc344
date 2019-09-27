@@ -1,0 +1,10 @@
+package com.hcl.ex;
+
+import java.io.FileInputStream;
+
+public class ChkDemo {
+	public static void main(String[] args) {
+		FileInputStream f1=new FileInputStream("c:/hello.txt");
+	}
+
+}

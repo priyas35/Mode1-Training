@@ -1,0 +1,5 @@
+package com.journaldev.jaxrs.dao;
+
+public interface EmployeeDAO {
+
+}

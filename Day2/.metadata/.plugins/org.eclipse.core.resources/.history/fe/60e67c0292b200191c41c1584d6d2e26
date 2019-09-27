@@ -1,0 +1,23 @@
+package com.hcl.boxing;
+
+public class StudentSearch {
+	public Student showEmploy(int sno){
+		Student student=null;
+		if(sno==1){
+			student=new tudent();
+			student.sno=100;
+			student.name="Anu";
+			student.city="chennai";
+			student.cgp=10;
+		}
+		if(empno==3){
+			student=new Employ();
+			student.sno=102;
+			student.name="hema";
+			student.city="trichy";
+			student.cgp=9;
+		}
+		return student;
+	}
+
+}

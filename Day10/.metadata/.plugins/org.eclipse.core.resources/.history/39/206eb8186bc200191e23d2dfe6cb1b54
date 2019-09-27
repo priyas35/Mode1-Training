@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+     
+      <a href='CreateAccountServlet'>CreateAccountServlet</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href='UpdateAccountServlet'>UpdateAccountServlet</a>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href='SearchAccountServlet'>SearchAccountServlet</a>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href='CloseAccountServlet'>CloseAccountServlet</a>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href='DepositAccountServlet'>DepositAccountServlet</a>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href='WithdrawAccountServlet'>WithdrawAccountServlet</a>
+   
+  
+    
+</body>
+</html>

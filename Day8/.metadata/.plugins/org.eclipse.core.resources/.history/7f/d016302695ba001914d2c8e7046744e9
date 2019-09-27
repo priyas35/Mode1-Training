@@ -1,0 +1,10 @@
+package com.hcl.inventory;
+
+public class Dummy {
+
+	public static void main(String[] args) {
+		StockDAO obj=new StockDAO();
+		String id=obj.generateStockidDao();
+		System.out.println(id);
+	}
+}

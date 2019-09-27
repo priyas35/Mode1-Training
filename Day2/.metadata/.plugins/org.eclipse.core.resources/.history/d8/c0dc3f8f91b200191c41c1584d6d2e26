@@ -1,0 +1,21 @@
+package com.hcl.boxing;
+
+public class StudentSearch {
+	public Student showEmploy(int sno){
+		Student yemplo=null;
+		if(sno==1){
+			employ=new Employ();
+			employ.empno=100;
+			employ.name="Anu";
+			employ.basic=6576;
+		}
+		if(empno==3){
+			employ=new Employ();
+			employ.empno=102;
+			employ.name="hema";
+			employ.basic=6446;
+		}
+		return employ;
+	}
+
+}
